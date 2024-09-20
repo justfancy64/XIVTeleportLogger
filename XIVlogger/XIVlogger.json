@@ -1,0 +1,12 @@
+{
+  "Author": "JustFancy64",
+  "Name": "XIVlogger",
+  "Punchline": "Did u ever wonder how many times u teleport to limsa ? time to find out",
+  "Description": "-stats opens main window",
+  "ApplicableVersion": "0.0.0.1",
+  "Tags": [
+    "logger",
+    "limsa",
+    "teleports"
+  ]
+}
