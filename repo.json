@@ -1,0 +1,26 @@
+[
+    {
+        "Author": "justfancy64",
+        "Name": "XivTeleportLogger",
+        "Punchline": "Teleport logger",
+        "Description": "Teleport logger",
+        "InternalName": "Teleport logger",
+        "AssemblyVersion": "1.0.0",
+        "TestingAssemblyVersion": "1.0.0",
+        "RepoUrl": "https://github.com/justfancy64/XIVTeleportLogger",
+        "ApplicableVersion": "any",
+        "DalamudApiLevel": 11,
+        "TestingDalamudApiLevel": 11,
+        "IsHide": "False",
+        "IsTestingExclusive": "False",
+        "DownloadCount": 0,
+        "LastUpdate": 0,
+        "LoadPriority": 69420,
+        "LoadRequiredState": 2,
+        "LoadSync": true,
+        "DownloadLinkInstall": "",
+        "DownloadLinkTesting": "",
+        "DownloadLinkUpdate": "",
+        "IconUrl": ""
+    }
+]
