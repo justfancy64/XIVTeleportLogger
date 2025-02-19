@@ -17,3 +17,12 @@
         ```
 
         make sure your changes dont crash the game before commiting
+
+
+    installing:
+
+        goto /xlsettings -> expiramental
+        paste following url to custom plugin repositories 
+        save and then install from pluggin intaller
+
+        URL : https://raw.githubusercontent.com/justfancy64/XIVTeleportLogger/master/repo.json
