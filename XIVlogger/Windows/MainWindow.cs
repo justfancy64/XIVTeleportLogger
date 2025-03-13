@@ -11,6 +11,7 @@ public class MainWindow : Window, IDisposable
 {
     private uint worldName;
     private Dictionary<string,Location> locations;
+    public string? name;
 
     public MainWindow(Plugin plugin,Dictionary<string, Location> Locations) : base("XIVStats##hidden")
     {

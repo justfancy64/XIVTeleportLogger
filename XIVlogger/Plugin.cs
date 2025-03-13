@@ -15,6 +15,7 @@ public sealed class Plugin : IDalamudPlugin
     [PluginService] internal static ITextureProvider TextureProvider { get; private set; } = null!;
     [PluginService] internal static ICommandManager CommandManager { get; private set; } = null!;
     [PluginService] internal static IFramework framework { get; private set; } = null!;
+    [PluginService] internal static IDataManager DataManager { get; private set; } = null!;
 
     private OnTerritoryChange terrChange;
 
@@ -52,6 +53,7 @@ public sealed class Plugin : IDalamudPlugin
         ConfigWindow = new ConfigWindow(this);
 
         MainWindow = new MainWindow(this, locations);
+        MainWindow.name = terrChange.name;
 
         terrChange.OnMapChanged += OnMapChanged;
 

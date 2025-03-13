@@ -9,6 +9,7 @@ using System.Runtime.InteropServices.Marshalling;
 using System.Collections.Generic;
 using Dalamud.Game.Network.Structures;
 using FFXIVClientStructs.FFXIV.Client.Game.Fate;
+using Lumina.Excel.Sheets;
 
 namespace XIVstats
 {
@@ -19,14 +20,18 @@ namespace XIVstats
     {
         public Dictionary<string, Location> locations;
 
+        public Lumina.Excel.ExcelSheet<Lumina.Excel.Sheets.TerritoryType> territorysheet { get; set; } = null!;
+
         public uint currMapId;
 
-        public event Action<uint> OnMapChanged;
+        public event Action<uint>? OnMapChanged;
+        public string? name;
 
 
       
         public OnTerritoryChange()
         {
+            territorysheet = Plugin.DataManager.GameData.Excel.GetSheet<Lumina.Excel.Sheets.TerritoryType>();
             InitializeCurrentMapId();
             var datamanager = new DataManager();
             locations = datamanager.dataManager();
@@ -59,10 +64,11 @@ namespace XIVstats
 
             if (GamePtr == null)
             {
-                currMapId = 1234;
                 return;
             }
             var newmapId = GamePtr->CurrentMapId;
+            name = territorysheet.GetRow(currMapId).Name.ToString();
+            
 
             if (newmapId == currMapId) return;
 
